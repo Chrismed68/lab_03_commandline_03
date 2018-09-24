@@ -17,39 +17,53 @@ We're going to be writing a shell script.  First, though... let's figure out wha
 
 What command did you use, and what was its output?
 ----------
-
-
+Date
+Mon Sep 24 15:48:28 EDT 2018
 
 ==========
 2. Print out a calendar for this month.
 
 What command did you use, and what was its output?
 ----------
-
-
+cal
+September 2018     
+Su Mo Tu We Th Fr Sa  
+                   1  
+ 2  3  4  5  6  7  8  
+ 9 10 11 12 13 14 15  
+16 17 18 19 20 21 22  
+23 24 25 26 27 28 29  
+30      
 
 ==========
 3. Go to your home directory.  Verify that you're in your home directory.
 
 What commands did you use to do this?
 ----------
-
-
-
+cd ~
+pwd
+/Users/student
 ==========
 4. Create an empty file called copy_to_backup.sh.  Verify that the file exists.
 
 What commands did you use to do this?
 ----------
-
-
-
+touch copy_to_backup.sh
+ls
+Adlm			Movies			drills.py
+Adobe			Music			ipe.properties
+Applications		New Unity Project	isus
+Desktop			Pictures		mtec1002-lab-03
+Documents		Public			mtec1003-lab-03
+Downloads		QLData			pymel.log
+Library			Things			xgen
+MPLABXProjects		copy_to_backup.sh
 ==========
 5. What are the permissions on your copy_to_backup.sh.
 
 What command did you use to find the permissions?
 ----------
-
+ls -l
 
 
 ==========
@@ -57,8 +71,8 @@ What command did you use to find the permissions?
 
 What commands did you use to do this?  What was the output?
 ----------
-
-
+chmod u+x copy_to_backup.sh
+-rwxr--r--   1 student  staff     0 Sep 24 15:51 copy_to_backup.sh
 
 ==========
 7. Try executing the file!
@@ -67,15 +81,15 @@ $ ./copy_to_backup.sh
 
 What command did you use to try to execute the file?  What happens?
 ----------
-
-
+./copy_to_backup.sh
+Nothing should happen because nothing is written in there
 
 ==========
 8. Open the file with nano
 
 What command did you use to do this?
 ----------
-
+nano copy_to_backup.sh
 
 
 ==========
@@ -87,7 +101,9 @@ c. print out "I'm done backing up"
 
 Write out the code in your file below...
 ----------
-
+mkdir -p ~/backup
+cp *.txt
+echo "I'm done backing up"
 
 
 ==========
@@ -98,7 +114,7 @@ Write out the code in your file below...
 
 What commands did you use to do this?
 ----------
-
+touch 1.txt 2.txt
 
 
 ==========
@@ -106,15 +122,15 @@ What commands did you use to do this?
 
 What commands did you use to do this?
 ----------
-
-
+cd ..
+mv copy_to_backup.sh test
 
 ==========
 13. Run your script.
 
 What commands did you use to do this?
 ----------
-
+./copy_to_backup.sh
 
 
 ==========
@@ -122,3 +138,8 @@ What commands did you use to do this?
 
 What commands did you use to do this?  Show the output.
 ----------
+find test
+test
+test/1.txt
+test/2.txt
+test/copy_to_backup.sh
