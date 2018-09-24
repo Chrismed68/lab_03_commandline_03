@@ -102,7 +102,7 @@ c. print out "I'm done backing up"
 Write out the code in your file below...
 ----------
 mkdir -p ~/backup
-cp *.txt
+cp *.txt backup
 echo "I'm done backing up"
 
 
@@ -138,8 +138,6 @@ What commands did you use to do this?
 
 What commands did you use to do this?  Show the output.
 ----------
-find test
-test
-test/1.txt
-test/2.txt
-test/copy_to_backup.sh
+find ~/backup
+ls
+1.txt			2.txt			copy_to_backup.sh
